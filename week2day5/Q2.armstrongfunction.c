@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int armstrong(int n)
+{
+    int sum=0,temp=n,r;
+
+    while(n>0)
+    {
+        r=n%10;
+        sum=sum+r*r*r;
+        n=n/10;
+    }
+
+    return sum==temp;
+}
+
+int main()
+{
+    int n;
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    if(armstrong(n))
+        printf("Armstrong Number");
+    else
+        printf("Not Armstrong Number");
+
+    return 0;
+}
